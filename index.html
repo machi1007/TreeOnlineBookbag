@@ -727,7 +727,63 @@ namespace HelloWorld
         <li>
             <span class="note-title"><h3>Python（2024.04.02）</h3></span>
             <pre style="display: none;">
+# 變量賦值
+a = 10
+b = 20.5
+name = "Alice"
 
+# 列表
+my_list = [1, 2, 3, 4, 5]
+
+# 字典
+my_dict = {"name": "Alice", "age": 25}
+
+# 條件語句
+if a &gt; 5:
+    print("a is greater than 5")
+else:
+    print("a is less than or equal to 5")
+
+# 循環
+for i in range(5):
+    print(i)
+
+# while 循環
+count = 0
+while count &lt; 5:
+    print(count)
+    count += 1
+
+# 函數定義
+def greet(name):
+    return "Hello " + name + "!"
+
+# 類別定義
+class MyClass:
+    def __init__(self, name):
+        self.name = name
+
+    def say_hello(self):
+        print("Hello " + self.name + "!")
+
+# 繼承
+class DerivedClass(MyClass):
+    def say_goodbye(self):
+        print("Goodbye " + self.name + "!")
+
+# 實例化對象
+obj = MyClass("Alice")
+obj.say_hello()
+
+# 列表推導式
+squares = [x**2 for x in range(10)]
+
+# 字典推導式
+square_dict = {x: x**2 for x in range(5)}
+
+# 使用模塊
+import math
+result = math.sqrt(25)
             </pre>
         </li>
         
