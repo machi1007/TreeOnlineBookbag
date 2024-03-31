@@ -541,11 +541,196 @@ async function fetchData() {
         </li>
         
                 <li>
-            <span class="note-title"><h3>R（2024.04.02）</h3></span>
+            <span class="note-title"><h3>R語言（2024.04.02）</h3></span>
             <pre style="display: none;">
-JSr
+# 變量賦值
+x &lt;- 10
+y &lt;- 20
+name &lt;- "John"
+
+# 向量
+v &lt;- c(1, 2, 3, 4, 5)
+names(v) &lt;- c("a", "b", "c", "d", "e")
+
+# 條件語句
+if (x &gt; 5) {
+  print("x is greater than 5")
+} else {
+  print("x is less than or equal to 5")
+}
+
+# 循環
+for (i in 1:5) {
+  print(i)
+}
+
+# 函數定義
+add &lt;- function(a, b) {
+  return(a + b)
+}
+
+# 數據框
+df &lt;- data.frame(
+  Name = c("Alice", "Bob", "Charlie"),
+  Age = c(25, 30, 35),
+  Salary = c(50000, 60000, 70000)
+)
+
+# 數據框的操作
+summary(df)
+head(df)
+str(df)
+
+# 繪圖
+plot(v, type = "l") # 繪製線型圖
+hist(v) # 繪製直方圖
+
+# 安裝並加載外部包
+# install.packages("ggplot2")
+library(ggplot2)
+ggplot(data = df, aes(x = Name, y = Salary)) + geom_col()
+
+# 處理缺失值
+is.na(df)
+na.omit(df)
+
+# 日期和時間
+date() # 顯示當前日期
+Sys.time() # 顯示當前時間
             </pre>
         </li>
+        
+         <li>
+            <span class="note-title"><h3>C語言（2024.04.02）</h3></span>
+            <pre style="display: none;">
+#include &lt;stdio.h&gt;
+
+// 主函數
+int main() {
+    // 變量宣告
+    int a = 10;
+    float b = 20.5;
+    char c = 'A';
+
+    // 條件語句
+    if (a &gt; 5) {
+        printf("a is greater than 5\n");
+    } else {
+        printf("a is not greater than 5\n");
+    }
+
+    // 循環
+    for(int i = 0; i &lt; a; i++) {
+        printf("%d ", i);
+    }
+    printf("\n");
+
+    // while 循環
+    int count = 0;
+    while (count &lt; a) {
+        printf("%d ", count);
+        count++;
+    }
+    printf("\n");
+
+    // 函數調用
+    int result = add(a, b);
+    printf("Result: %d\n", result);
+
+    // 指針
+    int* ptr = &amp;a;
+    printf("Address of a: %p\n", (void*)ptr);
+    printf("Value of a through pointer: %d\n", *ptr);
+
+    return 0;
+}
+
+// 函數定義
+int add(int x, int y) {
+    return x + y;
+}
+            </pre>
+        </li>
+        
+        <li>
+            <span class="note-title"><h3>C#語言（2024.04.02）</h3></span>
+            <pre style="display: none;">
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 變量宣告
+            int a = 10;
+            double b = 20.5;
+            string greeting = "Hello, World!";
+            
+            // 輸出到控制台
+            Console.WriteLine(greeting);
+            
+            // 條件語句
+            if (a &gt; 5)
+            {
+                Console.WriteLine("a is greater than 5");
+            }
+            else
+            {
+                Console.WriteLine("a is not greater than 5");
+            }
+            
+            // 循環
+            for(int i = 0; i &lt; 5; i++)
+            {
+                Console.WriteLine("i = " + i);
+            }
+            
+            // 方法調用
+            int sum = Add(a, a);
+            Console.WriteLine("Sum = " + sum);
+            
+            // 創建對象
+            MyClass obj = new MyClass();
+            obj.MyMethod();
+        }
+        
+        // 方法定義
+        static int Add(int x, int y)
+        {
+            return x + y;
+        }
+    }
+    
+    // 類別定義
+    class MyClass
+    {
+        public void MyMethod()
+        {
+            Console.WriteLine("In MyMethod of MyClass");
+        }
+    }
+    
+    // 繼承
+    class DerivedClass : MyClass
+    {
+        public void AnotherMethod()
+        {
+            Console.WriteLine("In AnotherMethod of DerivedClass");
+        }
+    }
+}
+            </pre>
+        </li>
+        
+        <li>
+            <span class="note-title"><h3>Python（2024.04.02）</h3></span>
+            <pre style="display: none;">
+
+            </pre>
+        </li>
+        
         <!-- 其他筆記 -->
     </ul>
 </div>
