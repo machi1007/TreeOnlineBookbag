@@ -384,7 +384,87 @@ linearity
         <li>
             <span class="note-title"><h3>CSS3（2024.04.02）</h3></span>
             <pre style="display: none;">
-css
+/* 基本選擇器 */
+element { }
+#id { }
+.class { }
+* { } /* 萬用選擇器 */
+
+/* 屬性選擇器 */
+[attr] { }
+[attr="value"] { }
+[attr^="value"] { } /* 屬性值以某字符串開頭 */
+[attr$="value"] { } /* 屬性值以某字符串結尾 */
+[attr*="value"] { } /* 屬性值包含某字符串 */
+
+/* 結構性偽類選擇器 */
+:first-child { }
+:last-child { }
+:nth-child(n) { }
+:nth-last-child(n) { }
+:nth-of-type(n) { }
+:first-of-type { }
+:last-of-type { }
+
+/* 目標、語言和否定偽類 */
+:target { }
+:lang(language) { }
+:not(selector) { }
+
+/* 動態偽類選擇器（用戶交互） */
+:hover { }
+:active { }
+:focus { }
+:visited { }
+
+/* 生成內容 */
+::before { content: ""; }
+::after { content: ""; }
+
+/* 背景和邊框 */
+background-image: url(image.png);
+background-size: cover; /* 或 contain */
+border-radius: 10px;
+box-shadow: 5px 5px 10px #888;
+
+/* 文本效果 */
+text-shadow: 2px 2px 2px #000;
+word-wrap: break-word;
+
+/* 2D/3D 轉換 */
+transform: rotate(30deg);
+transform: translate(50px, 100px);
+transform: scale(2, 3);
+
+/* 過渡 */
+transition: property duration timing-function delay;
+
+/* 動畫 */
+@keyframes animationname {
+  from { }
+  to { }
+}
+animation: name duration timing-function delay iteration-count direction;
+
+/* 彈性布局 */
+display: flex;
+justify-content: center; /* 或 space-between, space-around, flex-start, flex-end */
+align-items: center;
+
+/* 網格布局 */
+display: grid;
+grid-template-columns: 100px 1fr 2fr;
+grid-template-rows: auto;
+grid-gap: 10px;
+
+/* 多列布局 */
+column-count: 3;
+column-gap: 20px;
+
+/* 媒體查詢 */
+@media (max-width: 600px) {
+  /* CSS 規則 */
+}
             </pre>
         </li>
         
