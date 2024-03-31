@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>大樹電子書包</title>
+    <style>
+        /* 基本重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* 導航條 */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover, .navbar a:focus {
+            background-color: #555;
+        }
+
+        /* 主要內容 */
+        .content {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #eee;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        ul li:hover {
+            background: #ccc;
+        }
+
+        .definition {
+            display: none;
+            font-weight: bold;
+            margin-left: 10px;
+            color: #007BFF; /* 或您喜歡的顏色 */
+        }
+
+        .definition.show {
+            display: inline;
+        }
+
+#backToTop {
+    position: fixed;
+    bottom: 20px; /* 距離底部 20px */
+    right: 30px; /* 距離右側 30px */
+    z-index: 99; /* 確保按鈕在頁面上的其他內容之上 */
+    border: none; /* 去除邊框 */
+    outline: none; /* 去除輪廓 */
+    background-color: #333; /* 按鈕背景顏色 */
+    color: white; /* 文字顏色 */
+    cursor: pointer; /* 鼠標懸停時的光標形狀 */
+    padding: 15px; /* 內邊距 */
+    border-radius: 10px; /* 圓角邊框 */
+}
+
+#backToTop:hover {
+    background-color: #555; /* 鼠標懸停時的背景顏色變化 */
+}
+
+
+/* 對於小於 600px 寬的裝置，調整部分樣式 */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column; /* 將導航項目堆疊為一列 */
+    }
+
+    .content {
+        padding: 10px; /* 減少內邊距 */
+    }
+
+    #backToTop {
+        bottom: 10px; /* 調整回頂部按鈕的位置 */
+        right: 10px;
+    }
+}
+
+/* 對於平板尺寸（600px - 900px 寬）的裝置，調整部分樣式 */
+@media (min-width: 600px) and (max-width: 900px) {
+    .content {
+        max-width: 100%; /* 內容寬度調整為 100% */
+    }
+}
+
+/* 對於寬於 900px 的裝置，使用默認樣式或進行必要的調整 */
+
+
+.expanded {
+    background-color: #f4f7db; /* 設定您喜歡的顏色 */
+    color: #333; /* 設定文字顏色 */
+    /* 可以添加更多樣式 */
+}
+
+    </style>
+</head>
+<body>
+<button id="backToTop" title="回到頂部" style="display: none;">↑ Back to Top</button>
+
+<div class="navbar">
+    <a href="#home">電子書包</a>
+    <a href="#basicA">英語單字庫</a>
+    <a href="#basicB">國語詞語庫</a>
+    <a href="#basicC">數學筆記庫</a>
+</div>
+
+<div class="content" id="home">
+    <h1>歡迎參觀大樹的電子書包</h1>
+    <p>這裡記錄了我的學習歷程！</p>
+    <p><b>註</b>：請<b><u>點擊</u></b>筆記名稱展開或隱藏。</p>
+</div>
+
+<div class="content" id="basicA">
+    <h1>英語單字庫</h1>
+
+    <ul>
+        <li>
+            <span class="note-title"><h3>學習筆記A（2024.03.28）</h3></span>
+            <pre style="display: none;">
+descriptive
+inferential
+numerical
+graphical
+tabular
+experiment
+individuals
+branches
+distributions
+dispersion
+quartiles
+interquartile range
+variance
+standard deviation
+3M mean median mode
+arithmetic average
+central tendency
+symmetric distribution
+skewed distribution
+pros and cons
+Rule of Thumb
+heterogeneity
+deriving
+procedures
+agglomerative
+divisive
+significant
+semicolon
+            </pre>
+        </li>
+
+        <li>
+            <span class="note-title"><h3>學習筆記B（2024.04.01）</h3></span>
+            <pre style="display: none;">
+detecting
+illustration
+causal
+inference
+classification
+technique
+exploratory
+canonical
+conjoint
+perceptual mapping
+correspondence
+interpretation
+establish
+strive
+separation
+assess
+flowchart
+remaining
+interdependence
+beyond
+preliminary
+profiling
+univariate
+bivariate
+multivariate
+identifying
+remedies
+diagnosis
+contexts
+classifying
+illustrative
+normality
+homoscedasticity
+linearity
+            </pre>
+        </li>
+
+        <!-- 其他筆記 -->
+    </ul>
+</div>
+
+
+<div class="content" id="basicB">
+    <h1>語文詞語庫</h1>
+    <ul>
+        <li>
+            <span class="note-title"><h3>學習筆記A（2024.04.01）</h3></span>
+            <pre style="display: none;">
+廳	屋內待客、用餐的地方。如：「正廳」、「客廳」、「飯廳」。
+盞	小杯子。如：「酒盞」、「茶盞」、「把盞言歡」。
+闔	閉合。如：「闔眼」、「開闔」。
+籤	作為標示用的小紙條。如：「標籤」、「書籤」。
+溶	物質在液體中分解。如：「溶化」、「溶解」。
+咖	譯音用字。如：「咖啡」。
+客廳	用來接待賓客的場所。[例]媽媽插了盆花，擺在客廳的大桌上。
+閱讀	閱覽誦讀。[例]他有每日晨間閱讀書報的習慣。
+附近	距離不遠的地方。[例]媽媽要我到附近的雜貨店買醬油。
+回眸	回過頭看。[例]回眸一笑
+迷戀	愛好人或事物，進而入迷難捨。
+[例]像他這種完全不在乎他人感受的傲慢男子，實在不值得你迷戀。
+飲料	經過加工製造供人飲用的液體。如汽水、果汁、酒等。
+[例]飲料是酒席上不可或缺的東西。
+氣氛	在特定的環境中，所形成的一種可感覺的景象或情調。
+[例]這間餐廳的氣氛很羅曼蒂克。
+闔上	閉合、合攏起來。
+如：「他把門輕輕闔上，怕吵醒熟睡中的家人。」也作「合上」。
+書籤	夾在書裡，作為閱讀進度標識的卡片。
+[例]姊姊送了一套書籤給我當生日禮物。
+入場券	進入某場所時，持有許可進入的票券。
+[例]今晚職棒賽的入場券，一票難求。
+純粹	完全。[例]這次的不愉快，純粹是他的固執所造成的。
+            </pre>
+        </li>
+
+        <li>
+            <span class="note-title"><h3>學習筆記B（2024.04.02）</h3></span>
+            <pre style="display: none;">
+鍋碗瓢盆	廚房用具的通稱。
+音階	以一音為基音，將其他音依高低次序排列而成的一組音列，稱為「音階」。
+途中	路上，路途之間。[例]妹妹在回家途中遺失了鑰匙和錢包。
+鑑賞	鑑定賞玩。[例]他鑒賞古代書畫的能力，受到同行一致的肯定。　△鑒賞
+七彩繽紛	形容色彩繁多，華麗耀眼。
+[例]在這歡樂的慶典裡，七彩繽紛的氣球將天空點綴得更加亮麗。
+            </pre>
+        </li>
+
+        <!-- 其他筆記 -->
+    </ul>
+</div>
+
+
+
+
+<div class="content" id="basicC">
+    <h1>數學筆記庫</h1>
+    <ul>
+        <li>
+            <span class="note-title"><h3>小數乘除（2024.03.28）</h3></span>
+            <pre style="display: none;">
+和差積商餘
+小數加減法：對齊
+小數乘法：計算位數(原理：以10倍數為底的分數)
+小數除法：留意小數位置
+            </pre>
+        </li>
+
+        <li>
+            <span class="note-title"><h3>大單位（2024.04.02）</h3></span>
+            <pre style="display: none;">
+1公噸=1000公斤=1000000公克
+1公斤=1000公克
+1平方公里=100公頃(平方公引)=10000公畝(平方公丈)=1000000平方公尺
+1平方公尺=100平方公寸=10000平方公分=1000000平方公釐
+甲——9,699.173平方公尺
+坪——3.3058平方公尺
+長度：里引丈尺寸分厘
+重量：噸石衡斤兩錢克
+容積：秉擔斗升合杓撮
+1間教室約0.6~0.8a
+            </pre>
+        </li>
+
+        <!-- 其他筆記 -->
+    </ul>
+</div>
+
+<!-- 可以根據需要添加更多分類 -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const words = document.querySelectorAll('ul li');
+
+        words.forEach(word => {
+            word.addEventListener('click', function() {
+                let definition = this.querySelector('.definition');
+                definition.classList.toggle('show');
+            });
+        });
+    });
+
+// 當用戶滾動頁面時，根據滾動的距離顯示或隱藏按鈕
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("backToTop").style.display = "block";
+    } else {
+        document.getElementById("backToTop").style.display = "none";
+    }
+};
+
+// 當用戶點擊按鈕時，平滑滾動回頁面頂部
+document.getElementById('backToTop').addEventListener('click', function() {
+    document.body.scrollTop = 0; // 適用於 Safari
+    document.documentElement.scrollTop = 0; // 適用於 Chrome, Firefox, IE 和 Opera
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const noteTitles = document.querySelectorAll('.note-title');
+
+    noteTitles.forEach(title => {
+        title.addEventListener('click', function() {
+            let preContent = this.nextElementSibling;
+            // 切換 <pre> 內容的顯示狀態
+            preContent.style.display = preContent.style.display === 'none' ? 'block' : 'none';
+            // 根據 <pre> 內容的顯示狀態切換 'expanded' 類別
+            if (preContent.style.display === 'block') {
+                preContent.classList.add('expanded');
+            } else {
+                preContent.classList.remove('expanded');
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
